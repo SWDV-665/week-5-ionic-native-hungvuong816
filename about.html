@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2> Student full name - Hung Cam Vuong</h2>
+  <h3>Student ID - 0860995  </h3>
+
+
+
+<button ion-button full color = "primary" (click) = "takePhoto()" >Take Photo</button>
+<button ion-button full color = "secondary" (click) = "getPhoto()" >Upload From Library</button>
+<button ion-button full color = "danger" (click) = "cropPhoto()" >Crop Photo</button>
+
+  <p align = "center" *ngFor = "let hinh of hinhs"><img src = "{{hinh}}"></p>
+  <!-- <p align = "center" *ngFor = "let photo of photos"><img src = "{{photo.src}}"></p> -->
+
+  
+  <ion-card *ngFor = "let photo of photos"> 
+      <ion-content >
+      <p align = "center"><img src = "{{photo.URL}}"></p> 
+      <button ion-button block>
+        <ion-icon name = "heart"> </ion-icon>
+        <ion-badge item-right>{{photo.likes}}</ion-badge>
+      </button>>
+    </ion-content>
+
+  
+
+
+
+  </ion-card>
+
+</ion-content>
